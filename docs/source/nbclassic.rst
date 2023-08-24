@@ -20,6 +20,9 @@ way to continue using the Jupyter Notebook 6 tech-stack as they
 transition to using the Jupyter Notebook 7. The NbClassic package
 intends to address that need.
 
+You can read more about the migration impacts and coexistence of NbClassic and Notebook package on 
+the `NbClassic and Notebook migration plan <https://jupyter-notebook.readthedocs.io/en/latest/migrate_to_notebook7.html>`_ page.
+
 .. _Jupyter Enhancement Proposal #79: https://jupyter.org/enhancement-proposals/79-notebook-v7/notebook-v7.html
 
 .. _NbClassicUsage:
@@ -55,27 +58,6 @@ You can view a list of the available options by typing::
     $ jupyter nbclassic --help
     
 
-NbClassic in the Jupyter Ecosystem
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Read more details about the changes currently taking place in the
-Jupyter Ecosystem in this `team-compass issue`_.
-
-You can install the nbclassic, notebook 7 and jupyterlab, all three of
-which will be providing different user interfaces that will be available
-on the same server.
-
-As nbclassic provides the static assets for notebook 6.5.x, while
-having both installed should cause no issues, the user interface provided
-by these two packages will be the same. These UIs would be available in
-different servers.
-
-When using nbclassic and notebook <= 6.4.x you can expect that these UIs
-will not be only presented at different servers but may also differ as
-potential changes to the nbclassic UI will not be reflected in Notebook
-versions <= 6.4.x.
-
-.. _team-compass issue: https://github.com/jupyter/notebook-team-compass/issues/5#issuecomment-1085254000
-
 NbClassic Development
 ---------------------
 
@@ -103,5 +85,5 @@ Jupyter Notebook 7.
 ou can find a helpful list of classical Notebook extensions and corresponding Jupyterlab extensions
 if available at the `Jupyterlab-contrib website <https://jupyterlab-contrib.github.io/migrate_from_classical.html>`_.
 
-
 .. _JEP #79: https://jupyter.org/enhancement-proposals/79-notebook-v7/notebook-v7.html
+

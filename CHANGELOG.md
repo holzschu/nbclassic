@@ -2,6 +2,186 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 1.0.0
+
+([Full Changelog](https://github.com/jupyter/nbclassic/compare/v0.5.6...109a62153a74bae9a38f0c4bec460a91429f0c19))
+
+### Bugs fixed
+
+- Fix typo in documentation [#249](https://github.com/jupyter/nbclassic/pull/249) ([@echarles](https://github.com/echarles))
+
+### Documentation improvements
+
+- Fix typo in documentation [#249](https://github.com/jupyter/nbclassic/pull/249) ([@echarles](https://github.com/echarles))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/nbclassic/graphs/contributors?from=2023-04-27&to=2023-05-04&type=c))
+
+[@echarles](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aecharles+updated%3A2023-04-27..2023-05-04&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
+## 0.5.6
+
+([Full Changelog](https://github.com/jupyter/nbclassic/compare/v0.5.5...ddbbf579a904ef1c040f3221f7dd64d287323636))
+
+### Enhancements made
+
+- Add show_banner trait to control the banner display [#243](https://github.com/jupyter/nbclassic/pull/243) ([@echarles](https://github.com/echarles))
+
+### Other merged PRs
+
+- Updated main page README. [#246](https://github.com/jupyter/nbclassic/pull/246) ([@ericsnekbytes](https://github.com/ericsnekbytes))
+- Use the correct icon to display the application [#245](https://github.com/jupyter/nbclassic/pull/245) ([@befeleme](https://github.com/befeleme))
+- State the correct name of the application in the desktop entry [#244](https://github.com/jupyter/nbclassic/pull/244) ([@befeleme](https://github.com/befeleme))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/nbclassic/graphs/contributors?from=2023-04-05&to=2023-04-27&type=c))
+
+[@befeleme](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Abefeleme+updated%3A2023-04-05..2023-04-27&type=Issues) | [@echarles](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aecharles+updated%3A2023-04-05..2023-04-27&type=Issues) | [@ericsnekbytes](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aericsnekbytes+updated%3A2023-04-05..2023-04-27&type=Issues)
+
+## 0.5.5
+
+([Full Changelog](https://github.com/jupyter/nbclassic/compare/v0.5.4...8313c3d32f382c712a6c6eae2953ca9157410215))
+
+### Merged PRs
+
+- Remove redirect from /notebooks to /files [#235](https://github.com/jupyter/nbclassic/pull/235) ([@mwouts](https://github.com/mwouts))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/nbclassic/graphs/contributors?from=2023-03-30&to=2023-04-05&type=c))
+
+[@echarles](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aecharles+updated%3A2023-03-30..2023-04-05&type=Issues) | [@matthew-brett](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Amatthew-brett+updated%3A2023-03-30..2023-04-05&type=Issues) | [@mwouts](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Amwouts+updated%3A2023-03-30..2023-04-05&type=Issues)
+
+## 0.5.4
+
+([Full Changelog](https://github.com/jupyter/nbclassic/compare/v0.5.3...04ddbeffc4005eb25951ee9cceb2c6d542854cf6))
+
+### Bugs fixed
+
+- Copy marked.umd.js to marked.js and revert loading [#236](https://github.com/jupyter/nbclassic/pull/236) ([@echarles](https://github.com/echarles))
+- CI Test Fixed Round6a [#234](https://github.com/jupyter/nbclassic/pull/234) ([@ericsnekbytes](https://github.com/ericsnekbytes))
+- CI Test Fixes Round 5 [#232](https://github.com/jupyter/nbclassic/pull/232) ([@ericsnekbytes](https://github.com/ericsnekbytes))
+
+### Maintenance and upkeep improvements
+
+- CI Test Fixed Round6a [#234](https://github.com/jupyter/nbclassic/pull/234) ([@ericsnekbytes](https://github.com/ericsnekbytes))
+- CI Test Fixes Round 5 [#232](https://github.com/jupyter/nbclassic/pull/232) ([@ericsnekbytes](https://github.com/ericsnekbytes))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/nbclassic/graphs/contributors?from=2023-03-06&to=2023-03-30&type=c))
+
+[@echarles](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aecharles+updated%3A2023-03-06..2023-03-30&type=Issues) | [@ericsnekbytes](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aericsnekbytes+updated%3A2023-03-06..2023-03-30&type=Issues)
+
+## 0.5.3
+
+([Full Changelog](https://github.com/jupyter/nbclassic/compare/v0.5.2...c0ced4f1472100f9de8e773af9b6cd6e254ce1be))
+
+### Bugs fixed
+
+- Fix generating of .mo and .json files for nl translation [#221](https://github.com/jupyter/nbclassic/pull/221) ([@frenzymadness](https://github.com/frenzymadness))
+- Fix banner icons [#220](https://github.com/jupyter/nbclassic/pull/220) ([@echarles](https://github.com/echarles))
+
+### Maintenance and upkeep improvements
+
+- CI Test Fixes Round 4 [#226](https://github.com/jupyter/nbclassic/pull/226) ([@ericsnekbytes](https://github.com/ericsnekbytes))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/nbclassic/graphs/contributors?from=2023-02-18&to=2023-03-06&type=c))
+
+[@echarles](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aecharles+updated%3A2023-02-18..2023-03-06&type=Issues) | [@ericsnekbytes](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aericsnekbytes+updated%3A2023-02-18..2023-03-06&type=Issues) | [@frenzymadness](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Afrenzymadness+updated%3A2023-02-18..2023-03-06&type=Issues) | [@RRosio](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3ARRosio+updated%3A2023-02-18..2023-03-06&type=Issues)
+
+## 0.5.2
+
+([Full Changelog](https://github.com/jupyter/nbclassic/compare/v0.5.1...00e383600b7d76881bf6b8a951239aa6e383ae47))
+
+### Enhancements made
+
+- Add news banner and log [#215](https://github.com/jupyter/nbclassic/pull/215) ([@echarles](https://github.com/echarles))
+
+### Bugs fixed
+
+- CI Test Fixes Round 3 [#216](https://github.com/jupyter/nbclassic/pull/216) ([@ericsnekbytes](https://github.com/ericsnekbytes))
+- CI Test Fixes Round 2 [#212](https://github.com/jupyter/nbclassic/pull/212) ([@ericsnekbytes](https://github.com/ericsnekbytes))
+- Update get_rendered_contents further marked javascript upgrade [#210](https://github.com/jupyter/nbclassic/pull/210) ([@echarles](https://github.com/echarles))
+
+### Maintenance and upkeep improvements
+
+- CI Test Fixes Round 3 [#216](https://github.com/jupyter/nbclassic/pull/216) ([@ericsnekbytes](https://github.com/ericsnekbytes))
+- CI Test Fixes Round 2 [#212](https://github.com/jupyter/nbclassic/pull/212) ([@ericsnekbytes](https://github.com/ericsnekbytes))
+
+### Documentation improvements
+
+- Update security concerns link [#218](https://github.com/jupyter/nbclassic/pull/218) ([@RRosio](https://github.com/RRosio))
+
+### Other merged PRs
+
+- Don't require two different minimal versions of jupyter_server [#208](https://github.com/jupyter/nbclassic/pull/208) ([@hroncok](https://github.com/hroncok))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/nbclassic/graphs/contributors?from=2023-01-26&to=2023-02-18&type=c))
+
+[@echarles](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aecharles+updated%3A2023-01-26..2023-02-18&type=Issues) | [@ellisonbg](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aellisonbg+updated%3A2023-01-26..2023-02-18&type=Issues) | [@ericsnekbytes](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aericsnekbytes+updated%3A2023-01-26..2023-02-18&type=Issues) | [@hroncok](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Ahroncok+updated%3A2023-01-26..2023-02-18&type=Issues) | [@RRosio](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3ARRosio+updated%3A2023-01-26..2023-02-18&type=Issues)
+
+## 0.5.1
+
+([Full Changelog](https://github.com/jupyter/nbclassic/compare/v0.5.0...36d7ff3a81cc39f4d1291dd0e4b840033fc1be6d))
+
+### Bugs fixed
+
+- Add packages and package_data back in the setup_args [#206](https://github.com/jupyter/nbclassic/pull/206) ([@echarles](https://github.com/echarles))
+- Add static and templates as artifact for hatch build [#205](https://github.com/jupyter/nbclassic/pull/205) ([@echarles](https://github.com/echarles))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/nbclassic/graphs/contributors?from=2023-01-25&to=2023-01-26&type=c))
+
+[@echarles](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aecharles+updated%3A2023-01-25..2023-01-26&type=Issues)
+
+## 0.5.0
+
+([Full Changelog](https://github.com/jupyter/nbclassic/compare/v0.4.8...51b475bdf94e01ce84913800b19559eaf49a7d24))
+
+### Enhancements made
+
+- Upgrade to marked 4.0.10 [#201](https://github.com/jupyter/nbclassic/pull/201) ([@echarles](https://github.com/echarles))
+
+### Bugs fixed
+
+- Ci test fixes round1 [#202](https://github.com/jupyter/nbclassic/pull/202) ([@ericsnekbytes](https://github.com/ericsnekbytes))
+- fix loading of static and template path config [#192](https://github.com/jupyter/nbclassic/pull/192) ([@minrk](https://github.com/minrk))
+- Add pytest_jupyter to the list of test deps [#190](https://github.com/jupyter/nbclassic/pull/190) ([@echarles](https://github.com/echarles))
+- Align setup.py and setup.cfg [#181](https://github.com/jupyter/nbclassic/pull/181) ([@echarles](https://github.com/echarles))
+
+### Maintenance and upkeep improvements
+
+- Ci test fixes round1 [#202](https://github.com/jupyter/nbclassic/pull/202) ([@ericsnekbytes](https://github.com/ericsnekbytes))
+- Remove duplicate notebook_shim from setup.cfg [#197](https://github.com/jupyter/nbclassic/pull/197) ([@frenzymadness](https://github.com/frenzymadness))
+- Upgrade moment javascript package [#186](https://github.com/jupyter/nbclassic/pull/186) ([@echarles](https://github.com/echarles))
+- Add dependabot config [#175](https://github.com/jupyter/nbclassic/pull/175) ([@blink1073](https://github.com/blink1073))
+
+### Documentation improvements
+
+- Update documentation [#196](https://github.com/jupyter/nbclassic/pull/196) ([@RRosio](https://github.com/RRosio))
+- Update the project URL [#194](https://github.com/jupyter/nbclassic/pull/194) ([@jtpio](https://github.com/jtpio))
+
+### Other merged PRs
+
+- Fix the jupyter server base.handlers import [#187](https://github.com/jupyter/nbclassic/pull/187) ([@echarles](https://github.com/echarles))
+- Revert pull request 168 [#184](https://github.com/jupyter/nbclassic/pull/184) ([@echarles](https://github.com/echarles))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter/nbclassic/graphs/contributors?from=2022-11-03&to=2023-01-25&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Ablink1073+updated%3A2022-11-03..2023-01-25&type=Issues) | [@echarles](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aecharles+updated%3A2022-11-03..2023-01-25&type=Issues) | [@ericsnekbytes](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aericsnekbytes+updated%3A2022-11-03..2023-01-25&type=Issues) | [@frenzymadness](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Afrenzymadness+updated%3A2022-11-03..2023-01-25&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Ajtpio+updated%3A2022-11-03..2023-01-25&type=Issues) | [@kevin-bates](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Akevin-bates+updated%3A2022-11-03..2023-01-25&type=Issues) | [@minrk](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aminrk+updated%3A2022-11-03..2023-01-25&type=Issues) | [@RRosio](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3ARRosio+updated%3A2022-11-03..2023-01-25&type=Issues)
+
 ## 0.4.8
 
 ([Full Changelog](https://github.com/jupyter/nbclassic/compare/v0.4.7...5749f00a36cb80cecc04b684715013e59b227a41))
@@ -32,8 +212,6 @@
 ([GitHub contributors page for this release](https://github.com/jupyter/nbclassic/graphs/contributors?from=2022-10-20&to=2022-11-03&type=c))
 
 [@blink1073](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Ablink1073+updated%3A2022-10-20..2022-11-03&type=Issues) | [@dleen](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Adleen+updated%3A2022-10-20..2022-11-03&type=Issues) | [@echarles](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aecharles+updated%3A2022-10-20..2022-11-03&type=Issues) | [@ericsnekbytes](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3Aericsnekbytes+updated%3A2022-10-20..2022-11-03&type=Issues) | [@RRosio](https://github.com/search?q=repo%3Ajupyter%2Fnbclassic+involves%3ARRosio+updated%3A2022-10-20..2022-11-03&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.4.7
 
