@@ -5,7 +5,7 @@ store the current version info of nbclassic.
 import re
 
 # Version string must appear intact for tbump versioning
-__version__ = '1.0.0'
+__version__ = '1.3.0.dev0'
 
 # Build up version_info tuple for backwards compatibility
 pattern = r'(?P<major>\d+).(?P<minor>\d+).(?P<patch>\d+)(?P<rest>.*)'
@@ -15,6 +15,6 @@ if match['rest']:
   parts.append(match['rest'])
 version_info = tuple(parts)
 
-# Downstream maintainer, when running `python.setup.py jsversion`,
-# the version string is propagated to the JavaScript files,  do not forget to
+# Downstream maintainer, when running `tbump <new version>`,
+# the version string is propagated to the JavaScript files, do not forget to
 # patch the JavaScript files in `.postN` release done by distributions.

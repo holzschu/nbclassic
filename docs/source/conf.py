@@ -14,7 +14,6 @@
 
 import sys
 import os
-import shlex
 import shutil
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -117,7 +116,7 @@ release = version_ns['__version__']
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -161,22 +160,47 @@ todo_include_todos = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinx_rtd_theme'
+html_theme = "pydata_sphinx_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+    "icon_links": [
+        {
+            "name": "PyPI",
+            "url": "https://pypi.org/project/nbclassic",
+            "icon": "fa-solid fa-box",
+        }
+    ],
+    "use_edit_page_button": True,
+    "github_url": "https://github.com/jupyter/nbclassic",
+    "navbar_end": [
+        # disabled until widget dark variables are available
+        # "theme-switcher",
+        "navbar-icon-links",
+    ],
+    "secondary_sidebar_items": ["edit-this-page", "sourcelink", "search-field.html"]
+}
+
+html_context = {
+    # disabled until widget dark variables are available
+    "default_mode": "light",
+    "doc_path": "docs",
+    "github_repo": "nbclassic",
+    "github_user": "jupyter",
+    "github_version": "main",
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = "Classic Jupyter Notebook"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = None
+html_short_title = "NbClassic"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -209,7 +233,9 @@ html_static_path = ['_static']
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+html_sidebars = {
+    "**": ["sidebar-nav-bs-index.html"]
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.

@@ -267,7 +267,7 @@ class NotebookApp(
         if len(nbclassic_path()) > 0:
             handlers.append(
                 (
-                    rf"/nbclassic",
+                    r"/nbclassic",
                     RedirectHandler,
                     {"url": self.serverapp.base_url+"nbclassic/tree"}
                 )
@@ -280,6 +280,7 @@ class NotebookApp(
         handlers.extend(load_handlers('nbclassic.tree.handlers'))
         handlers.extend(load_handlers('nbclassic.notebook.handlers'))
         handlers.extend(load_handlers('nbclassic.edit.handlers'))
+        handlers.extend(load_handlers('nbclassic.view.handlers'))
         self.handlers.extend(handlers)
 
         # Wildcard routes
@@ -324,13 +325,13 @@ class NotebookApp(
         router.add_rules(core_rules)
         router.add_rules(static_handlers)
         router.add_rules(final_rules)
-        print("""
+        print(r"""
   _   _          _      _
  | | | |_ __  __| |__ _| |_ ___
  | |_| | '_ \/ _` / _` |  _/ -_)
   \___/| .__/\__,_\__,_|\__\___|
        |_|
-                                                                           
+
 Read the migration plan to Notebook 7 to learn about the new features and the actions to take if you are using extensions.
 
 https://jupyter-notebook.readthedocs.io/en/latest/migrate_to_notebook7.html

@@ -1,4 +1,3 @@
-
 .. _server_security:
 
 Security in the Jupyter NbClassic server

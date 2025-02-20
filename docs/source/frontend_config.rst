@@ -1,7 +1,6 @@
-.. _frontend_config:
-
+==================================
 Configuring the NbClassic frontend
-=================================
+==================================
 
 .. note::
 
@@ -94,7 +93,7 @@ pages.
 Persisting configuration settings
 ---------------------------------
 
-A banner might be shown to users to inform them about news or updates. This 
+A banner might be shown to users to inform them about news or updates. This
 banner can be hidden launching the server with the show_banner trait.::
 
    jupyter notebook --NotebookApp.show_banner=False

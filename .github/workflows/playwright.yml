@@ -7,24 +7,23 @@ on:
     branches: '*'
 jobs:
   build:
-    runs-on: ${{ matrix.os }}-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu, macos]
-        python-version: [ '3.7', '3.8', '3.9', '3.10']
+        os: [ubuntu-22.04, macos-13]
+        python-version: [ '3.8', '3.9', '3.10', '3.11' ]
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
-        architecture: 'x64'
 
     - name: Set up Node
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         node-version: '12.x'
 

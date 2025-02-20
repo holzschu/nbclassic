@@ -3,23 +3,31 @@ name: Testing nbclassic
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 jobs:
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5.3.0
+        with:
+          python-version: '3.13'
+      - name: Lint with Pre-commit
+        uses: pre-commit/action@v3.0.1
   build:
-    runs-on: ${{ matrix.os }}-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu, macos, windows]
-        python-version: ["3.7", "3.8", "3.9", "3.10", "pypy-3.8"]
-        exclude:
-          - os: windows
-            python-version: pypy-3.8
+        os: [ubuntu-22.04, macos-13, windows-2022]
+        python-version: [ '3.8', '3.9', '3.10', '3.11' ]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Base Setup
         uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
       - name: Install pip dependencies
@@ -33,13 +41,8 @@ jobs:
         run: |
           jupyter nbclassic -h
       - name: Test with pytest and coverage
-        if: ${{ matrix.python-version != 'pypy-3.8' }}
         run: |
           python -m pytest -vv --cov=nbclassic --cov-report term-missing:skip-covered || python -m pytest -vv --cov=nbclassic --cov-report term-missing:skip-covered
-      - name: Run the tests on pypy
-        if: ${{ matrix.python-version == 'pypy-3.8' }}
-        run: |
-          python -m pytest -vv || python -m pytest -vv -lf
       - name: Test Running Server
         if: startsWith(runner.os, 'Linux')
         run: |
@@ -56,12 +59,12 @@ jobs:
 #    timeout-minutes: 20
 #    runs-on: ubuntu-latest
 #    steps:
-#      - uses: actions/checkout@v2
+#      - uses: actions/checkout@v4
 #      - name: Base Setup
 #        uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
 #        with:
-#          python_version: "3.7"
-#      - name: Install miniumum versions
+#          python_version: "3.8"
+#      - name: Install minimum versions
 #        uses: jupyterlab/maintainer-tools/.github/actions/install-minimums@v1
 #      - name: Run the unit tests
 #        run: pytest -vv || pytest -vv --lf
@@ -72,7 +75,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Base Setup
         uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
       - name: Install the Python dependencies
@@ -91,14 +94,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Base Setup
         uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
       - name: Build SDist
         run: |
           pip install build
           python -m build --sdist
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: "sdist"
           path: dist/*.tar.gz
@@ -112,7 +115,7 @@ jobs:
       - name: Base Setup
         uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
       - name: Download sdist
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
       - name: Install From SDist
         run: |
           set -ex

@@ -1,22 +1,22 @@
 name: Check Release
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
   pull_request:
     branches: ["*"]
 
 jobs:
   check_release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         group: [check_release, link_check]
       fail-fast: false
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Install Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: 3.9
           architecture: "x64"
@@ -25,16 +25,16 @@ jobs:
         run: |
           echo "::set-output name=dir::$(pip cache dir)"
       - name: Cache pip
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ${{ steps.pip-cache.outputs.dir }}
-          key: ${{ runner.os }}-pip-${{ hashFiles('setup.cfg') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
             ${{ runner.os }}-pip-
             ${{ runner.os }}-pip-
       - name: Cache checked links
         if: ${{ matrix.group == 'link_check' }}
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ~/.cache/pytest-link-check
           key: ${{ runner.os }}-linkcheck-${{ hashFiles('**/*.md', '**/*.rst') }}-md-links
@@ -48,7 +48,7 @@ jobs:
           pip install -e .
       - name: Check Release
         if: ${{ matrix.group == 'check_release' }}
-        uses: jupyter-server/jupyter_releaser/.github/actions/check-release@v1
+        uses: jupyter-server/jupyter_releaser/.github/actions/check-release@v2
         with:
           version_spec: 100.100.100
           token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,5 +1,4 @@
-.. _configuration-overview:
-
+======================
 Configuration Overview
 ======================
 
@@ -50,8 +49,8 @@ front-end NbClassic client (i.e. the familiar notebook interface).
             $ jupyter nbclassic --generate-config
 
       :ref:`Command line arguments for configuration <config>` settings are documented in the configuration file and the user documentation.
-      
-  - :ref:`Running a Notebook server <working_remotely>`
+
+  - Review the section: :ref:`Running a Notebook server <working_remotely>`
   - Related: `Configuring a language kernel <https://ipython.readthedocs.io/en/latest/install/kernel_install.html>`_
     to run in the Notebook server enables your server to run other languages, like R or Julia.
 
@@ -69,7 +68,7 @@ NbClassic front-end client
 
 Notebook extensions
 -------------------
-- `Distributing Jupyter Extensions as Python Packages <https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Distributing%20Jupyter%20Extensions%20as%20Python%20Packages.html#Distributing-Jupyter-Extensions-as-Python-Packages>`_
+- `Distributing Jupyter Extensions as Python Packages <https://jupyter-notebook.readthedocs.io/en/v6.5.4/examples/Notebook/Distributing%20Jupyter%20Extensions%20as%20Python%20Packages.html#Distributing-Jupyter-Extensions-as-Python-Packages>`_
 - `Extending the Notebook <https://jupyter-notebook.readthedocs.io/en/stable/extending/index.html>`_
 
 

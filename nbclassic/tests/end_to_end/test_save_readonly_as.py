@@ -1,7 +1,10 @@
 """Test readonly notebook saved and renamed"""
 
 
+import sys
 import traceback
+
+import pytest
 
 from .utils import EDITOR_PAGE, EndToEndTimeout
 
@@ -20,7 +23,10 @@ def set_notebook_name(nb, name):
     JS = f'() => Jupyter.notebook.rename("{name}")'
     nb.evaluate(JS, page=EDITOR_PAGE)
 
-
+# on Python 3.7 we get an old playwright which hangs on body.press("Escape")
+@pytest.mark.skipif(sys.version_info < (3, 8), reason="requires python3.8 or higher due to playwright")
+# and we also see this fail on osx randomly
+@pytest.mark.skipif(sys.platform == 'darwin', reason="fails randomly on osx")
 def test_save_readonly_as(notebook_frontend):
     print('[Test] [test_save_readonly_as]')
     notebook_frontend.wait_for_kernel_ready()
@@ -94,16 +100,16 @@ def test_save_readonly_as(notebook_frontend):
 
         # Set the notebook name field in the save dialog
         print('[Test] Fill the input field')
-        name_input_element.evaluate(f'(elem) => {{ elem.value = "writable_notebook.ipynb"; return elem.value; }}')
+        name_input_element.evaluate('(elem) => {{ elem.value = "writable_notebook.ipynb"; return elem.value; }}')
         notebook_frontend.wait_for_condition(
             lambda: name_input_element.evaluate(
-                f'(elem) => {{ elem.value = "writable_notebook.ipynb"; return elem.value; }}') == 'writable_notebook.ipynb',
+                '(elem) => {{ elem.value = "writable_notebook.ipynb"; return elem.value; }}') == 'writable_notebook.ipynb',
             timeout=120,
             period=.25
         )
         # Show the input field value
         print('[Test] Name input field contents:')
-        field_value = name_input_element.evaluate(f'(elem) => {{ return elem.value; }}')
+        field_value = name_input_element.evaluate('(elem) => {{ return elem.value; }}')
         print('[Test]   ' + field_value)
         if field_value != 'writable_notebook.ipynb':
             return False
@@ -114,15 +120,7 @@ def test_save_readonly_as(notebook_frontend):
         save_element.focus()
         save_element.click()
 
-        # Application lag may cause the save dialog to linger,
-        # if it's visible wait for it to disappear before proceeding
-        if save_element.is_visible():
-            print('[Test] Save element still visible after save, wait for hidden')
-            try:
-                save_element.expect_not_to_be_visible(timeout=120)
-            except EndToEndTimeout as err:
-                traceback.print_exc()
-                print('[Test]   Save button failed to hide...')
+        save_element.wait_for('detached')
 
         # Check if the save operation succeeded (by checking notebook name change)
         notebook_frontend.wait_for_condition(
